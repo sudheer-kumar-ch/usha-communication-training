@@ -1,8 +1,11 @@
-const hamburger = document.querySelector('.hamburger-menu');
-const navbar = document.querySelector('.navbar');
-
-hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('active'); // Toggle the active class to show/hide nav links
+// Change navbar background and add shadow on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled'); // Add shadow class
+    } else {
+        navbar.classList.remove('scrolled'); // Remove shadow class
+    }
 });
 
 
@@ -193,4 +196,46 @@ window.addEventListener('scroll', showCards);
 // Initial call to show cards on page load
 showCards();
 
-  
+//
+//carousel
+let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalSlides = slides.length;
+
+    if (index >= totalSlides) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+        if (i === currentSlide) {
+            slide.classList.add('active');
+            dots[i].classList.add('active');
+        }
+    });
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function goToSlide(index) {
+    showSlide(index);
+}
+
+// Auto-slide every 5 seconds (optional)
+setInterval(nextSlide, 5000);
+
+//carousel end
