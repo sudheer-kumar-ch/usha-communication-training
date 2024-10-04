@@ -1362,12 +1362,18 @@ html :where(img[class*=wp-image-]) {
 
 .footer-icon {
   font-family: "FontAwesome";
-  margin: 0 15px;
+  margin: 0 5px;
   font-size: 24px;
   color: #fff;
   transition: color 0.3s ease;
 }
-
+.footer-icon2{
+  font-family: "FontAwesome";
+  margin: 0 0px;
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
 .footer-icon:hover {
   color: #ff9800;
 }
