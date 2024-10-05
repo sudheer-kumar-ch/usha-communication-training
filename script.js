@@ -7,6 +7,14 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled'); // Remove shadow class
     }
 });
+const hamburger = document.getElementById('hamburger');
+//const menu =document.getElementById('menu');
+const navItems = document.getElementById('navItems');
+
+hamburger.onclick = function() {
+    
+    navItems.classList.toggle('open')
+};
 
 
 
