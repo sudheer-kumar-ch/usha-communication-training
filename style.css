@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 body {
-  padding-top: 80px;  /* Adjust based on the height of your navbar*/
   overflow-x: hidden; /* Prevent horizontal scroll */
   scroll-behavior: smooth; /* Smooth scrolling */
+
 }
 
 /*body {
@@ -21,7 +21,8 @@ body {
 /* Header styles */
 header {
   width: 100%; /* Full width */
-  background-color: #1e1e1e; /* Dark background for the body */
+  background-color: #00103a; /* Dark background for the body */
+  margin: 0;
 }
 
 /* Navbar styles */
@@ -30,11 +31,12 @@ header {
   justify-content: space-between; /* Space between logo and nav items */
   align-items: center; /* Center items vertically */
   padding: 15px 30px; /* Padding for navbar */
-  background-color: rgba(28, 28, 28, 0.9); /* Dark background */
+  background-color:#00103a ; /* Dark background rgba(28, 28, 28, 0.9)*/
   position: fixed; /* Fixed navbar */
   top: 0; /* Sticks to the top */
   left: 0; /* Align to the left */
   right: 0; /* Align to the right */
+  margin-bottom: 0px;
   z-index: 1000; /* Keeps the navbar above other content */
   transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
 }
@@ -330,36 +332,64 @@ header {
 .custom-navbar-item a:hover {
     color: #949494;
 }
-
+home-first-left-bg
 /**/
 
-
 .home-first-bg{
+  background-image: url('usha-images/usha-first-bg-img.jpg');
+  margin: 0;
+  height: 100vh;
+  background-attachment: fixed; /* Keeps the background in place while content scrolls */
+  background-size: cover;
   display: flex;
   flex-direction: row;
-}
 
+}
+.usha-first-img-bg{
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+.usha-first-img{
+ width: 80%;
+
+}
+.home-first-left-main-bg{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
 .home-first-left-bg{
-    padding-top:110px;
-    padding-left: 150px;
-    /*height: 100vh;*/
-    width: 60%;
-    
-    /*background-image: linear-gradient(90deg, #ffffff 40%, rgba(0, 0, 0, 0) 80%);*/
+  width: 80%;
+  /*padding-left: 150px;*
+  /*height: 100vh;*/
+  
+  
+  /*background-image: linear-gradient(90deg, #ffffff 40%, rgba(0, 0, 0, 0) 80%);*/
 }
 
 .pt{
     text-decoration: line-through;
     font-family: 'Montserrat', sans-serif;
 }
+.heading-style-first{
+  font-size: 30px;
+  font-family: fantasy;
+  color: #ffffff;
+  text-align: center;
+}
 .heading-style{
     font-size: 45px;
-    width: 80%;
     font-family: 'Montserrat', sans-serif;
     /*font-family:Candal, Helvetica, Arial, Lucida, sans-serif;*/
     font-weight: 1000;
     font-style: normal;
-    color: #003366;
+    color: #ffffff;
+    text-align: center;
+
     /*color:rgb(0,0,0);*/
 }
 @media (max-width:768px){
@@ -397,10 +427,15 @@ header {
     font-size: 22px;
     margin-top:25px;
     margin-bottom: 25px;
-    font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
-    color: #666666;
-}
+    font-family:'Times New Roman', Times, serif;
+    color: #ffffff;
+    text-align: center;
 
+}
+.line-img-center{
+
+  text-align: center;
+}
 
 html :where(img[class*=wp-image-]) {
     height: auto;
@@ -410,17 +445,20 @@ html :where(img[class*=wp-image-]) {
   /* Button container for alignment */
   .button-container {
     margin-top: 0px; 
+    text-align: center;
 }
 .custom-button {
-    background-color: #000000;
+    background-color: transparent;
+    border:2px solid #f39c12;
+    width:50%;
     font-family: 'Candal', Helvetica, Arial, Lucida, sans-serif !important;
     font-weight: bold;
-    color: #ffffff;
-    border: none;
+    color: #f39c12;
+    border-radius: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 1rem;
     cursor: pointer;
     position: relative;
@@ -509,7 +547,6 @@ html :where(img[class*=wp-image-]) {
     }
   }  
 
-
   /* Adding a unique geometric pattern as a pseudo-element */
   .unique-main-card-column::before {
     content: "";
@@ -552,14 +589,104 @@ html :where(img[class*=wp-image-]) {
     margin: 10px auto;
     border-radius: 5px;
   }
-  
-  /* Column layout for related cards */
-  .unique-related-cards-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+/* Column layout for related cards */
+
+
+
+
+  .communication-bg{
+    padding:50px;
   }
+  .communication-heading{
+    font-size: 20px;
+    text-align: center;
+    font-family:cursive;
+  }
+  .communication-first-card-bg {
+    display: flex;
+    justify-content: center;
+  }
+  .communication-each-card{
+    border:2px solid #000000;
+    width: 20%;
+    text-align: center;
+    padding:10px;
+    position: relative; /* Set the box as a reference for positioning */
+  }
+  .communication-button {
+    position: absolute;
+    bottom: -20px; /* Position the button just above the bottom border */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #101a72;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 7px 7px 0px #e5a950;
+    z-index: 1; /* Ensures the button is above the box */
+  }
+  
+  .communication-each-card p{
+    font-size: 20px;
+    color:#ff9800;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+.communicaion-two-cards-and-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 50px;
+}
+.communication-each-card2-margin-top{
+  margin-top: 150px;
+}
+.communication-each-card2-bg{
+  display: flex;
+  justify-content: center;
+}
+.communication-each-card2{
+  border:2px solid #000000;
+  text-align: center;
+  padding-left:25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative; /* Set the box as a reference for positioning */
+}
+.card2-padding{
+  padding-right: 70px;
+  padding-left: 70px;
+}
+.communication-each-card2 p{
+  font-size: 20px;
+  color:#ff9800;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.communicaion-image{
+  box-shadow: 1px 1px 20px #fffa65;
+  width: 300px;
+  animation: slow-zoom 5s ease-in-out forwards;
+}
+/* Keyframes for zoom and fade-in effect */
+@keyframes slow-zoom {
+  0% {
+      opacity: 0;
+      transform: scale(1.2); /* Start slightly zoomed in */
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1); /* End at normal size */
+  }
+}
+
+
+
+
+
+
+
 
   /* Related cards with subtle glass effect */
   .unique-related-card-column {
@@ -567,7 +694,7 @@ html :where(img[class*=wp-image-]) {
     backdrop-filter: blur(10px); /* Slight blur for glass effect */
     color: #333;
     padding: 20px;
-    width: 60%;
+    /*width: 0%;*/
     border-radius: 10px; /* Rounded corners */
     text-align: center;
     border:1px solid #ff9800;
@@ -577,20 +704,20 @@ html :where(img[class*=wp-image-]) {
     z-index: 0; /* Keep cards above the background 2*/
   }
   
+  /*
   .unique-related-card-column h3 {
-    font-size: 1.5rem; /* Increased font size for related card headings */
-    font-weight: bold; /* Bold for emphasis */
+    font-size: 1.5rem; /* Increased font size for related card headings 
+    font-weight: bold; /* Bold for emphasis 
   }
   
   .unique-related-card-column p {
-    font-size: 1rem; /* Increased font size for related card content */
+    font-size: 1rem; /* Increased font size for related card content 
   }
   
   .unique-related-card-column:hover {
-    background-color: rgba(255, 255, 255, 1); /* Slightly more opaque on hover rgba(255, 255, 255, 1);*/
-    transform: translateY(-3px); /* Slight lift on hover */
-  }
-  
+    background-color: rgba(255, 255, 255, 1); /* Slightly more opaque on hover rgba(255, 255, 255, 1);
+    transform: translateY(-3px); /* Slight lift on hover 
+  }*/
 
 
 
@@ -607,7 +734,7 @@ html :where(img[class*=wp-image-]) {
 .custom-arrow-container {
     width: 90%;
     display: flex;
-    justify-content: space-around; /* Space between cards */
+    justify-content: space-evenly; /* Space between cards */
     align-items: center; /* Center vertically */
     padding: 0px;
     /*padding-left: 60px;*/
@@ -635,7 +762,7 @@ html :where(img[class*=wp-image-]) {
 
 .custom-logo {
      /* Adjust logo size */
-     margin-right: 20px;
+     margin-right: 10px;
     height: auto; /* Keep aspect ratio */
 }
 
@@ -648,7 +775,7 @@ html :where(img[class*=wp-image-]) {
 
 .custom-number {
     font-size: 2.5rem; /* Larger font size for numbers */
-    color: #e94430; /* Color for the number */
+    color: #00103a; /* Color for the number */
     font-weight: normal; /* Bold font */
     display: flex; /* Flex for number and plus */
     align-items: center; /* Center items vertically */
@@ -658,7 +785,7 @@ html :where(img[class*=wp-image-]) {
 .custom-plus {
     font-size: 1.5rem; /* Size of the plus symbol */
     margin-left: 5px; /* Space between number and plus */
-    color: #e94430; /* Color for the plus */
+    color: #00103a; /* Color for the plus */
 }
 
 .custom-description {
@@ -669,8 +796,8 @@ html :where(img[class*=wp-image-]) {
     text-align: center;
 }
 
-
 @media (max-width:768px){
+  
   .custom-arrow-container{
     display: flex;
     flex-direction: column;
@@ -688,6 +815,7 @@ html :where(img[class*=wp-image-]) {
     border-radius: 15px; /* Rounded corners for the container */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for the container */
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -700,7 +828,7 @@ html :where(img[class*=wp-image-]) {
   .custom-description{
     font-size: 14px;
   }
-  .custom-logo-container{
+  /*.custom-logo-container{
     width: 15%;
     padding-right: 0px;
   }
@@ -718,7 +846,7 @@ html :where(img[class*=wp-image-]) {
   }
   .custom-card4-content-padding{
     padding-right: 36px;
-  }
+  }*/
 }
 
 
@@ -1231,7 +1359,7 @@ html :where(img[class*=wp-image-]) {
 .container-bg-carousel {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #1e1e1e;
+  
   color: #fff;
   min-height: 100vh;
   display: flex;

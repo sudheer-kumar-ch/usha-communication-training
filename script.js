@@ -20,7 +20,7 @@ hamburger.onclick = function() {
 
 
 
-const words = ["Self", "Others", "in Business"];
+const words = ["With Self", "With Others", "in Business"];
 let index = 0;
 const carouselText = document.querySelector('.text-carousel-text');
 
